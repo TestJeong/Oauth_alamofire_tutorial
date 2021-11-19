@@ -25,7 +25,7 @@ struct RegisterView : View {
             Form {
                 // 이름
                 Section(header: Text("이름"), content: {
-                    TextField("이름을 입력해주세요", text : $nameInput).keyboardType(.default)
+                    TextField("이름을 입력해주세요..", text : $nameInput).keyboardType(.default)
                 })
                 // 이메일
                 Section(header: Text("이메일"), content: {
