@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2245F2512745CF86007B2D53 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2502745CF86007B2D53 /* ApiClient.swift */; };
+		2245F2532745D079007B2D53 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2522745D079007B2D53 /* BaseInterceptor.swift */; };
+		2245F2552745D19D007B2D53 /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2542745D19D007B2D53 /* ApiLogger.swift */; };
+		2245F2572745D34B007B2D53 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2562745D34B007B2D53 /* AuthRouter.swift */; };
+		2245F25A2745DA64007B2D53 /* AuthApService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2592745DA64007B2D53 /* AuthApService.swift */; };
+		2245F25C2745DD46007B2D53 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F25B2745DD46007B2D53 /* TokenData.swift */; };
+		2245F25E2745E1B4007B2D53 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F25D2745E1B4007B2D53 /* AuthResponse.swift */; };
+		2245F2612745EE56007B2D53 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2602745EE56007B2D53 /* UserVM.swift */; };
+		2245F2642746276F007B2D53 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2632746276F007B2D53 /* UserDefaultManager.swift */; };
+		2245F26627462EF3007B2D53 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F26527462EF3007B2D53 /* UserRouter.swift */; };
+		2245F26827462FE1007B2D53 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F26727462FE1007B2D53 /* UserApiService.swift */; };
+		2245F26A27463098007B2D53 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F26927463098007B2D53 /* UserInfoResponse.swift */; };
+		2245F26D27463216007B2D53 /* OAuthCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F26C27463216007B2D53 /* OAuthCredential.swift */; };
+		2245F26F27463235007B2D53 /* OAuthAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F26E27463235007B2D53 /* OAuthAuthenticator.swift */; };
+		2245F271274636CE007B2D53 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F270274636CE007B2D53 /* TokenResponse.swift */; };
+		22B186E127452CCB00F1B01C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B186E027452CCB00F1B01C /* ProfileView.swift */; };
+		22B186E527452F6100F1B01C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B186E427452F6100F1B01C /* UserData.swift */; };
+		22B186E727453EA500F1B01C /* OtherUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B186E627453EA500F1B01C /* OtherUserProfileView.swift */; };
+		22B186E92745407600F1B01C /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B186E82745407600F1B01C /* UserListView.swift */; };
+		22B186EC2745463600F1B01C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 22B186EB2745463600F1B01C /* Alamofire */; };
+		22D87CA22747434D00A11076 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D87CA12747434D00A11076 /* TestData.swift */; };
 		22F8599B2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8599A2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift */; };
 		22F8599D2744DD420021A469 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8599C2744DD420021A469 /* ContentView.swift */; };
 		22F8599F2744DD440021A469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F8599E2744DD440021A469 /* Assets.xcassets */; };
@@ -14,6 +35,8 @@
 		22F859AC2744DD450021A469 /* Oauth_alamofire_tutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F859AB2744DD450021A469 /* Oauth_alamofire_tutorialTests.swift */; };
 		22F859B62744DD450021A469 /* Oauth_alamofire_tutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F859B52744DD450021A469 /* Oauth_alamofire_tutorialUITests.swift */; };
 		22F859B82744DD450021A469 /* Oauth_alamofire_tutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F859B72744DD450021A469 /* Oauth_alamofire_tutorialUITestsLaunchTests.swift */; };
+		22F859C62744E59F0021A469 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F859C52744E59F0021A469 /* LoginView.swift */; };
+		22F859C82744EAD10021A469 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F859C72744EAD10021A469 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +57,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2245F2502745CF86007B2D53 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		2245F2522745D079007B2D53 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
+		2245F2542745D19D007B2D53 /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
+		2245F2562745D34B007B2D53 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		2245F2592745DA64007B2D53 /* AuthApService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApService.swift; sourceTree = "<group>"; };
+		2245F25B2745DD46007B2D53 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
+		2245F25D2745E1B4007B2D53 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		2245F2602745EE56007B2D53 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
+		2245F2632746276F007B2D53 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		2245F26527462EF3007B2D53 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		2245F26727462FE1007B2D53 /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
+		2245F26927463098007B2D53 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
+		2245F26C27463216007B2D53 /* OAuthCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthCredential.swift; sourceTree = "<group>"; };
+		2245F26E27463235007B2D53 /* OAuthAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAuthenticator.swift; sourceTree = "<group>"; };
+		2245F270274636CE007B2D53 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		22B186E027452CCB00F1B01C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		22B186E427452F6100F1B01C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		22B186E627453EA500F1B01C /* OtherUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileView.swift; sourceTree = "<group>"; };
+		22B186E82745407600F1B01C /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		22D87CA12747434D00A11076 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		22F859972744DD420021A469 /* Oauth_alamofire_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oauth_alamofire_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8599A2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oauth_alamofire_tutorialApp.swift; sourceTree = "<group>"; };
 		22F8599C2744DD420021A469 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +87,8 @@
 		22F859B12744DD450021A469 /* Oauth_alamofire_tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Oauth_alamofire_tutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F859B52744DD450021A469 /* Oauth_alamofire_tutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oauth_alamofire_tutorialUITests.swift; sourceTree = "<group>"; };
 		22F859B72744DD450021A469 /* Oauth_alamofire_tutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oauth_alamofire_tutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22F859C52744E59F0021A469 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		22F859C72744EAD10021A469 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B186EC2745463600F1B01C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +117,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2245F24D2745CF3B007B2D53 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2245F26B274631FF007B2D53 /* OAuth */,
+				2245F2582745DA4F007B2D53 /* Service */,
+				2245F24F2745CF69007B2D53 /* Interceptor */,
+				2245F24E2745CF4F007B2D53 /* Router */,
+				2245F2502745CF86007B2D53 /* ApiClient.swift */,
+				2245F2542745D19D007B2D53 /* ApiLogger.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2245F24E2745CF4F007B2D53 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2245F2562745D34B007B2D53 /* AuthRouter.swift */,
+				2245F26527462EF3007B2D53 /* UserRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2245F24F2745CF69007B2D53 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				2245F2522745D079007B2D53 /* BaseInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		2245F2582745DA4F007B2D53 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2245F2592745DA64007B2D53 /* AuthApService.swift */,
+				2245F26727462FE1007B2D53 /* UserApiService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2245F25F2745EE2F007B2D53 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2245F2602745EE56007B2D53 /* UserVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2245F26227462756007B2D53 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2245F2632746276F007B2D53 /* UserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2245F26B274631FF007B2D53 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				2245F26C27463216007B2D53 /* OAuthCredential.swift */,
+				2245F26E27463235007B2D53 /* OAuthAuthenticator.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		22B186E327452F4A00F1B01C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22B186E427452F6100F1B01C /* UserData.swift */,
+				2245F25B2745DD46007B2D53 /* TokenData.swift */,
+				2245F25D2745E1B4007B2D53 /* AuthResponse.swift */,
+				2245F26927463098007B2D53 /* UserInfoResponse.swift */,
+				2245F270274636CE007B2D53 /* TokenResponse.swift */,
+				22D87CA12747434D00A11076 /* TestData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		22F8598E2744DD420021A469 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +218,11 @@
 			isa = PBXGroup;
 			children = (
 				22F8599A2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift */,
-				22F8599C2744DD420021A469 /* ContentView.swift */,
+				2245F24D2745CF3B007B2D53 /* API */,
+				2245F26227462756007B2D53 /* Manager */,
+				22F859C42744E5850021A469 /* View */,
+				2245F25F2745EE2F007B2D53 /* ViewModel */,
+				22B186E327452F4A00F1B01C /* Model */,
 				22F8599E2744DD440021A469 /* Assets.xcassets */,
 				22F859A02744DD440021A469 /* Preview Content */,
 			);
@@ -127,6 +254,19 @@
 			path = Oauth_alamofire_tutorialUITests;
 			sourceTree = "<group>";
 		};
+		22F859C42744E5850021A469 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22F8599C2744DD420021A469 /* ContentView.swift */,
+				22B186E027452CCB00F1B01C /* ProfileView.swift */,
+				22F859C52744E59F0021A469 /* LoginView.swift */,
+				22F859C72744EAD10021A469 /* RegisterView.swift */,
+				22B186E627453EA500F1B01C /* OtherUserProfileView.swift */,
+				22B186E82745407600F1B01C /* UserListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +283,9 @@
 			dependencies = (
 			);
 			name = Oauth_alamofire_tutorial;
+			packageProductDependencies = (
+				22B186EB2745463600F1B01C /* Alamofire */,
+			);
 			productName = Oauth_alamofire_tutorial;
 			productReference = 22F859972744DD420021A469 /* Oauth_alamofire_tutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +358,9 @@
 				Base,
 			);
 			mainGroup = 22F8598E2744DD420021A469;
+			packageReferences = (
+				22B186EA2745463600F1B01C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 22F859982744DD420021A469 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +403,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2245F26827462FE1007B2D53 /* UserApiService.swift in Sources */,
+				22B186E727453EA500F1B01C /* OtherUserProfileView.swift in Sources */,
+				22B186E527452F6100F1B01C /* UserData.swift in Sources */,
+				22D87CA22747434D00A11076 /* TestData.swift in Sources */,
+				2245F2512745CF86007B2D53 /* ApiClient.swift in Sources */,
+				2245F2572745D34B007B2D53 /* AuthRouter.swift in Sources */,
+				2245F26F27463235007B2D53 /* OAuthAuthenticator.swift in Sources */,
+				2245F271274636CE007B2D53 /* TokenResponse.swift in Sources */,
+				2245F25A2745DA64007B2D53 /* AuthApService.swift in Sources */,
 				22F8599D2744DD420021A469 /* ContentView.swift in Sources */,
+				22B186E92745407600F1B01C /* UserListView.swift in Sources */,
+				22F859C82744EAD10021A469 /* RegisterView.swift in Sources */,
+				2245F2532745D079007B2D53 /* BaseInterceptor.swift in Sources */,
+				2245F2612745EE56007B2D53 /* UserVM.swift in Sources */,
+				22B186E127452CCB00F1B01C /* ProfileView.swift in Sources */,
+				22F859C62744E59F0021A469 /* LoginView.swift in Sources */,
+				2245F25C2745DD46007B2D53 /* TokenData.swift in Sources */,
+				2245F26D27463216007B2D53 /* OAuthCredential.swift in Sources */,
+				2245F26627462EF3007B2D53 /* UserRouter.swift in Sources */,
+				2245F2552745D19D007B2D53 /* ApiLogger.swift in Sources */,
+				2245F25E2745E1B4007B2D53 /* AuthResponse.swift in Sources */,
+				2245F2642746276F007B2D53 /* UserDefaultManager.swift in Sources */,
 				22F8599B2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift in Sources */,
+				2245F26A27463098007B2D53 /* UserInfoResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +773,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22B186EA2745463600F1B01C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22B186EB2745463600F1B01C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22B186EA2745463600F1B01C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22F8598F2744DD420021A469 /* Project object */;
 }
