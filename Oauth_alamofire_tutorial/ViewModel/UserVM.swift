@@ -12,6 +12,7 @@ import Combine
 // 뷰 에서 변경을 감지
 
 class UserVM: ObservableObject {
+    // 계속 메모리에 데이터가 남아있기 때문에 해지할 필요가 있어 해지할때 사용 하는 메서드
     var subscription = Set<AnyCancellable>()
     
     @Published var loggedInUser : UserData? = nil
@@ -42,6 +43,8 @@ class UserVM: ObservableObject {
             .sink {(completion: Subscribers.Completion<AFError>) in
                 print("UserVM completion: \(completion)")
             } receiveValue: { (receivedUser: TestData) in
+                print("값은 무엇일까요? : \(receivedUser)")
+              
                 self.TestInUser = receivedUser
                 self.loginSuccess.send()
             }.store(in: &subscription)

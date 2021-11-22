@@ -35,24 +35,31 @@ struct LoginView : View {
                     })
                 }
             }
+            LoggedInView()
+
             // 이벤트가 왔을때 무엇인가 하겠다
             .onReceive(userVM.loginSuccess, perform: {
+//                let dataas = KeychainHelper.standard.read(service: "refresh,access", account: "localLogin",type: TestData.self)!
+//                print("엑세스 토큰 입니다 : \(dataas.access)")
+
                 print("LoginView - loginSuccess() called")
                 self.shouldShowAlert = true
-                if shouldShowAlert {
-                    print("true")
-                } else {
-                    print("fase")
-                }
             })
-//            .alert("로그인이 완료되었습니다.", isPresented: $shouldShowAlert){
-//                Button("확인", role: .cancel){
-//                    self.dismiss()
-//                }
-//            }
+            .alert("로그인이 완료되었습니다.", isPresented: $shouldShowAlert){
+                Button("확인", role: .cancel){
+                    self.dismiss()
+                }
+            }
         }.navigationTitle("로그인 하기")
     }
 }
+
+struct LoggedInView : View {
+    var body: some View {
+        Text("Logged in!")
+    }
+}
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

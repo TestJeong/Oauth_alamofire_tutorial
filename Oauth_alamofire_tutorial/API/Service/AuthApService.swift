@@ -25,7 +25,9 @@ enum AuthApiService {
             .map{ receivedValue in
                 // 받은 토큰 정보 어딘가에 영구 저장
                 // userdefaults 또는 keychain에 저장하며 현재는 userdefaults에 저장
-                UserDefaultsManager.shared.setTokens(accessToken: receivedValue.token.accessToken,                                      refreshToken: receivedValue.token.refreshToken)
+                UserDefaultsManager.shared.setTokens(accessToken: receivedValue.token.accessToken,
+                                                     refreshToken: receivedValue.token.refreshToken)
+           
                 return receivedValue.user
             }.eraseToAnyPublisher()
     }
@@ -39,9 +41,9 @@ enum AuthApiService {
             .publishDecodable(type: TestData.self)
             .value()
             .map{ receivedValue in
-                // 받은 토큰 정보 어딘가에 영구 저장
-                // userdefaults 또는 keychain에 저장하며 현재는 userdefaults에 저장
-                UserDefaultsManager.shared.setTokens(accessToken: receivedValue.access,                                      refreshToken: receivedValue.refresh)
+                // 받은 토큰 정보 어딘가에 영구 저장. keychain에 저장
+     
+                KeychainHelper.standard.save( receivedValue, service: "refresh,access", account: "localLogin")
                 return receivedValue
             }.eraseToAnyPublisher()
     }
