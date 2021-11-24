@@ -15,8 +15,9 @@ class BaseInterceptor : RequestInterceptor {
         var request = urlRequest // 들어온 url 주소를 변수에 담음
         
         // 헤더 부분 넣어주기
-        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
+//        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+//        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Accept")
+        print("베이스 인터셉트에서 호출합니다 => \(request)")
         
         completion(.success(request)) // 중요! 성공이 되었다고 알려주어야 함 정상적으로 url 주소를 받아오면 외부로 내보낸다
     }

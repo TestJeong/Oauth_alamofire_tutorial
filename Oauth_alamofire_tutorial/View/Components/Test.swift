@@ -51,8 +51,9 @@ struct RadioButtonField: View {
 
 //MARK:- Group of Radio Buttons
 enum Gender: String {
-    case male = "Male"
-    case female = "Female"
+    case one = "1학년"
+    case two = "2학년"
+    case three = "3학년"
 }
 
 struct RadioButtonGroups: View {
@@ -62,25 +63,35 @@ struct RadioButtonGroups: View {
     
     var body: some View {
         HStack {
-            radioMaleMajority
-            radioFemaleMajority
+            radioOneMajority
+            radioTwoMajority
+            radioThreeMajority
         }
     }
     
-    var radioMaleMajority: some View {
+    var radioOneMajority: some View {
         RadioButtonField(
-            id: Gender.male.rawValue,
-            label: Gender.male.rawValue,
-            isMarked: selectedId == Gender.male.rawValue ? true : false,
+            id: Gender.one.rawValue,
+            label: Gender.one.rawValue,
+            isMarked: selectedId == Gender.one.rawValue ? true : false,
             callback: radioGroupCallback
         )
     }
     
-    var radioFemaleMajority: some View {
+    var radioTwoMajority: some View {
         RadioButtonField(
-            id: Gender.female.rawValue,
-            label: Gender.female.rawValue,
-            isMarked: selectedId == Gender.female.rawValue ? true : false,
+            id: Gender.two.rawValue,
+            label: Gender.two.rawValue,
+            isMarked: selectedId == Gender.two.rawValue ? true : false,
+            callback: radioGroupCallback
+        )
+    }
+    
+    var radioThreeMajority: some View {
+        RadioButtonField(
+            id: Gender.three.rawValue,
+            label: Gender.three.rawValue,
+            isMarked: selectedId == Gender.three.rawValue ? true : false,
             callback: radioGroupCallback
         )
     }

@@ -25,7 +25,7 @@ enum AuthRouter : URLRequestConvertible {
         case .login:
             return "/signin"
         case .tokenRefresh:
-            return "user/token-refresh"
+            return "token/refresh"
         default:
             return ""
         
@@ -57,8 +57,8 @@ enum AuthRouter : URLRequestConvertible {
             
         case .tokenRefresh:
             var params = Parameters()
-            let tokenData = UserDefaultsManager.shared.getTokens()
-            params["refresh_token"] = tokenData.refreshToken
+            let tokenData = KeychainHelper.standard.read(service: "refresh,access", account: "localLogin",type: TestData.self)!
+            params["refresh_token"] = tokenData.refresh
             return params
             
             
@@ -74,6 +74,8 @@ enum AuthRouter : URLRequestConvertible {
         request.method = method
         
         request.httpBody = try JSONEncoding.default.encode(request, with:paramters).httpBody
+        
+        //print("테스트 테스트 \(paramters)")
         
         return request
     

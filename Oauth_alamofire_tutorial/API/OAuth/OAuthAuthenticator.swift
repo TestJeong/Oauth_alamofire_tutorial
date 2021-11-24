@@ -33,12 +33,11 @@ class OAuthAuthenticator : Authenticator {
                case .success(let value) :
                    
                    // 재발행 받은 토큰 저장
-                   UserDefaultsManager.shared.setTokens(accessToken: value.token.accessToken,                                           refreshToken: value.token.refreshToken)
-                   
+                   KeychainHelper.standard.save( value, service: "refresh,access", account: "localLogin")
                    let expiration = Date(timeIntervalSinceNow: 60 * 60)
                    
                    // 새로운 크리덴셜
-                   let newCredential = OAuthCredential(accessToken: value.token.accessToken,                                           refreshToken:value.token.refreshToken,                                          expiration: expiration )
+                   let newCredential = OAuthCredential(accessToken: value.token.access,                                                          refreshToken:value.token.refresh,                                                         expiration: expiration )
                    completion(.success(newCredential))
                    
                case .failure(let error) :
@@ -55,7 +54,7 @@ class OAuthAuthenticator : Authenticator {
                        with response: HTTPURLResponse,
                        failDueToAuthenticationError error: Error) -> Bool {
            print("OAuthAuthenticator - didRequest() called")
-
+           print("hello디드리퀘스트 => \(response)")
            //401 코드가 떨어지면 리프레시 토큰으로 엑세스 토큰을 재발행 하려고 요청
            switch response.statusCode {
            case 401 : return true

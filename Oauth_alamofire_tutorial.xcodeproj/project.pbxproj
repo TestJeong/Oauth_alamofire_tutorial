@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222E8294274DEF990014F469 /* RandomUserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E8293274DEF990014F469 /* RandomUserRowView.swift */; };
 		2245F2512745CF86007B2D53 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2502745CF86007B2D53 /* ApiClient.swift */; };
 		2245F2532745D079007B2D53 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2522745D079007B2D53 /* BaseInterceptor.swift */; };
 		2245F2552745D19D007B2D53 /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F2542745D19D007B2D53 /* ApiLogger.swift */; };
@@ -23,6 +24,7 @@
 		2245F26F27463235007B2D53 /* OAuthAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F26E27463235007B2D53 /* OAuthAuthenticator.swift */; };
 		2245F271274636CE007B2D53 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245F270274636CE007B2D53 /* TokenResponse.swift */; };
 		224DC925274B8AAD004B502F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DC924274B8AAD004B502F /* Test.swift */; };
+		224DC92A274BD84E004B502F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DC929274BD84E004B502F /* SearchView.swift */; };
 		22B186E127452CCB00F1B01C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B186E027452CCB00F1B01C /* ProfileView.swift */; };
 		22B186E527452F6100F1B01C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B186E427452F6100F1B01C /* UserData.swift */; };
 		22B186E727453EA500F1B01C /* OtherUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B186E627453EA500F1B01C /* OtherUserProfileView.swift */; };
@@ -30,6 +32,7 @@
 		22B186EC2745463600F1B01C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 22B186EB2745463600F1B01C /* Alamofire */; };
 		22C064C6274935ED00A9F801 /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C064C5274935ED00A9F801 /* CallToActionButton.swift */; };
 		22D87CA22747434D00A11076 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D87CA12747434D00A11076 /* TestData.swift */; };
+		22E6044C274C8C7700495842 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6044B274C8C7700495842 /* RegisterData.swift */; };
 		22F8599B2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8599A2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift */; };
 		22F8599D2744DD420021A469 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8599C2744DD420021A469 /* ContentView.swift */; };
 		22F8599F2744DD440021A469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F8599E2744DD440021A469 /* Assets.xcassets */; };
@@ -59,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		222E8293274DEF990014F469 /* RandomUserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserRowView.swift; sourceTree = "<group>"; };
 		2245F2502745CF86007B2D53 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		2245F2522745D079007B2D53 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		2245F2542745D19D007B2D53 /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
@@ -75,12 +79,14 @@
 		2245F26E27463235007B2D53 /* OAuthAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAuthenticator.swift; sourceTree = "<group>"; };
 		2245F270274636CE007B2D53 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		224DC924274B8AAD004B502F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		224DC929274BD84E004B502F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		22B186E027452CCB00F1B01C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		22B186E427452F6100F1B01C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		22B186E627453EA500F1B01C /* OtherUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileView.swift; sourceTree = "<group>"; };
 		22B186E82745407600F1B01C /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		22C064C5274935ED00A9F801 /* CallToActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
 		22D87CA12747434D00A11076 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		22E6044B274C8C7700495842 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
 		22F859972744DD420021A469 /* Oauth_alamofire_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oauth_alamofire_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8599A2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oauth_alamofire_tutorialApp.swift; sourceTree = "<group>"; };
 		22F8599C2744DD420021A469 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 				2245F26927463098007B2D53 /* UserInfoResponse.swift */,
 				2245F270274636CE007B2D53 /* TokenResponse.swift */,
 				22D87CA12747434D00A11076 /* TestData.swift */,
+				22E6044B274C8C7700495842 /* RegisterData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +284,8 @@
 				22F859C72744EAD10021A469 /* RegisterView.swift */,
 				22B186E627453EA500F1B01C /* OtherUserProfileView.swift */,
 				22B186E82745407600F1B01C /* UserListView.swift */,
+				224DC929274BD84E004B502F /* SearchView.swift */,
+				222E8293274DEF990014F469 /* RandomUserRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,10 +445,13 @@
 				2245F25C2745DD46007B2D53 /* TokenData.swift in Sources */,
 				2245F26D27463216007B2D53 /* OAuthCredential.swift in Sources */,
 				2245F26627462EF3007B2D53 /* UserRouter.swift in Sources */,
+				224DC92A274BD84E004B502F /* SearchView.swift in Sources */,
 				224DC925274B8AAD004B502F /* Test.swift in Sources */,
 				2245F2552745D19D007B2D53 /* ApiLogger.swift in Sources */,
 				22C064C6274935ED00A9F801 /* CallToActionButton.swift in Sources */,
+				222E8294274DEF990014F469 /* RandomUserRowView.swift in Sources */,
 				2245F25E2745E1B4007B2D53 /* AuthResponse.swift in Sources */,
+				22E6044C274C8C7700495842 /* RegisterData.swift in Sources */,
 				2245F2642746276F007B2D53 /* UserDefaultManager.swift in Sources */,
 				22F8599B2744DD420021A469 /* Oauth_alamofire_tutorialApp.swift in Sources */,
 				2245F26A27463098007B2D53 /* UserInfoResponse.swift in Sources */,

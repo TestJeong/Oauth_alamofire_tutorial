@@ -19,60 +19,76 @@ struct RegisterView : View {
     @State var passwordInput : String = ""
     
     @State private var selected : Int = 0
-
+    
+    @State var Modal : Bool = false
+    
     
     var body : some View {
         VStack{
-            Form { // 아이디
-                Section(header: Text("아이디"), content: {
-                    TextField("아이디", text : $emilInput).keyboardType(.emailAddress).autocapitalization(.none)
-
-                })
-                // 비밀번호
-                Section(header: Text("비밀번호"), content: {
-                    SecureField("비밀번호", text : $passwordInput).keyboardType(.default)
-                    SecureField("비밀번호 확인", text : $passwordInput).keyboardType(.default)
+            // 아이디
+            HStack{
+                Text("아이디")
+                    .padding()
+                TextField("아이디를 입력하세요", text : $emilInput).keyboardType(.emailAddress).autocapitalization(.none)
+                Button(action:{ print("버튼 클릭")},
+                       label: {
+                    Text("중복확인")
                     
                 })
-                Section(header: Text("학년"), content: {
-//                    Picker("Gender:", selection: $selected){
-//                        Text("Male").tag(0)
-//                        Text("Female").tag(1)
-//                        Text("Male").tag(0)
-//                    }
-             
-                })
-                Section(header: Text("아이디"), content: {
-                    TextField("아이디", text : $emilInput).keyboardType(.emailAddress).autocapitalization(.none)
-
-                })
+            }.padding()
             
-                
-            }
+            // 비밀번호
+            HStack{
+                Text("비밀번호")
+                    .padding()
+                SecureField("비밀번호", text : $passwordInput).keyboardType(.default)
+            }.padding()
+            
+            // 비밀번호 확인
+            HStack{
+                Text("비밀번호 확인")
+                    .padding()
+                SecureField("비밀번호 확인", text : $passwordInput).keyboardType(.default)
+            }.padding()
+            
+            // 학년 선택
             HStack {
-                       Text("Gender")
-                           .font(Font.headline)
-                       RadioButtonGroups { selected in
-                           print("Selected Gender is: \(selected)")
-                       }
-                   }.padding()
-                Button(action: {print("회원가입 버튼 클릭")
-                    userVM.register(name: nameInput, email: emilInput, password: passwordInput)
-                }, label: {
-                    Text("회원가입하기")
-                })
-         
+                Text("학년")
+                    .font(Font.headline)
+                    .padding()
+                RadioButtonGroups { selected in
+                    print("Selected Gender is: \(selected)")
+                }
+            }.padding()
+            
+            
+            TextField("_", text : $emilInput).keyboardType(.emailAddress).autocapitalization(.none)
+            
+            Button(action: {self.Modal = true
+                
+            }, label: {
+                Text("학교선택")
+            })
+            .sheet(isPresented: $Modal,
+                   onDismiss: {print("Dismissed")},
+                   content : { PresentedViews() })
+                    
+            
+            Button(action: {print("회원가입 버튼 클릭")
+                userVM.register(name: nameInput, email: emilInput, password: passwordInput)
+            }, label: {
+                Text("회원가입하기")
+            })
             
             
             // 이벤트가 왔을때 무엇인가 하겠다
-            .onReceive(userVM.registerationSuccess, perform: {
-                print("RegisterView - registrationSuccess() called")
-            
-            })
-            
+                .onReceive(userVM.registerationSuccess, perform: {
+                    print("RegisterView - registrationSuccess() called")
+                })
         }.navigationTitle("회원가입")
     }
 }
+
 
 
 

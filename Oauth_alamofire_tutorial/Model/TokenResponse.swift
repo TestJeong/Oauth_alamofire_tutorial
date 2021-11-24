@@ -7,7 +7,7 @@
 
 import Foundation
 
+//refresh token data
 struct TokenResponse: Codable {
-    let message : String
-    let token : TokenData
+    let token : TestData
 }

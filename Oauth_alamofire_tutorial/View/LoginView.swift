@@ -39,8 +39,8 @@ struct LoginView : View {
 
             // 이벤트가 왔을때 무엇인가 하겠다
             .onReceive(userVM.loginSuccess, perform: {
-//                let dataas = KeychainHelper.standard.read(service: "refresh,access", account: "localLogin",type: TestData.self)!
-//                print("엑세스 토큰 입니다 : \(dataas.access)")
+                let dataas = KeychainHelper.standard.read(service: "refresh,access", account: "localLogin",type: TestData.self)!
+             print("엑세스 토큰 입니다 : \(dataas.access)")
 
                 print("LoginView - loginSuccess() called")
                 self.shouldShowAlert = true
