@@ -12,7 +12,7 @@ class BaseInterceptor : RequestInterceptor {
     
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         
-        var request = urlRequest // 들어온 url 주소를 변수에 담음
+        let request = urlRequest // 들어온 url 주소를 변수에 담음
         
         // 헤더 부분 넣어주기
 //        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")

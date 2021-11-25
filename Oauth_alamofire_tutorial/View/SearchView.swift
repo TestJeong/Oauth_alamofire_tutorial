@@ -2,21 +2,21 @@
 import SwiftUI
 
 struct PresentedViews : View {
-    @Environment(\.presentationMode) var presentationMode
-    @State var searchText: String = ""
-    @State var searching = false
     @EnvironmentObject var userVM : UserVM
-    //@State var results = [SchoolInformation]()
-    
-    @ObservedObject var apple = UserVM()
-      
-    @State var users : SchoolInformation? = nil
+    @State var schoolList : [SchoolInformation] = []
         
-
     var body: some View {
-        Text("asdf")
-        List(apple.schoolList){ test in
-            RandomUserRowView(test)
+        NavigationView{
+            List(schoolList) { aUser in
+                Text(aUser.school_name)
+                Text(aUser.school_address)
+            }
+
+          
+          
+        }.onAppear(perform: {userVM.fetchSchoolInformation(schoolName: "대동")})
+            .onReceive(userVM.$schoolList, perform: {self.schoolList = $0})
+           
         }
           
     }
@@ -56,7 +56,7 @@ struct PresentedViews : View {
 //                   }
 //               }
 //           }
-       }
+       
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
        
@@ -64,42 +64,42 @@ struct SearchView_Previews: PreviewProvider {
             
     }
 }
-//
-//struct SearchBar: View {
-//
-//    @Binding var searchText: String
-//    @Binding var searching: Bool
-//
-//    var body: some View {
-//        ZStack {
-//            Rectangle()
-//                .foregroundColor(Color("LightGray"))
-//            HStack {
-//                Image(systemName: "magnifyingglass")
-//                TextField("Search ..", text: $searchText) { startedEditing in
-//                    if startedEditing {
-//                        withAnimation {
-//                            searching = true
-//                        }
-//                    }
-//                } onCommit: {
-//                    withAnimation {
-//                        searching = false
-//                    }
-//                }
-//            }
-//            .foregroundColor(.gray)
-//            .padding(.leading, 13)
-//        }
-//            .frame(height: 40)
-//            .cornerRadius(13)
-//            .padding()
-//    }
-//}
-//
-//
-//extension UIApplication {
-//     func dismissKeyboard() {
-//         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-//     }
-// }
+
+struct SearchBar: View {
+    
+    @Binding var searchText: String
+    @Binding var searching: Bool
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(Color("LightGray"))
+            HStack {
+                Image(systemName: "magnifyingglass")
+                TextField("Search ..", text: $searchText) { startedEditing in
+                    if startedEditing {
+                        withAnimation {
+                            searching = true
+                        }
+                    }
+                } onCommit: {
+                    withAnimation {
+                        searching = false
+                    }
+                }
+            }
+            .foregroundColor(.gray)
+            .padding(.leading, 13)
+        }
+            .frame(height: 40)
+            .cornerRadius(13)
+            .padding()
+    }
+}
+
+
+extension UIApplication {
+     func dismissKeyboard() {
+         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+     }
+ }

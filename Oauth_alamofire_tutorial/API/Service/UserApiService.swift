@@ -44,39 +44,15 @@ enum UserApiService  {
     }
     
     // 학교 정보
-    static func school_info(schoolName : String) -> AnyPublisher<SchoolInformation, AFError>{
+    static func school_info(schoolName : String) -> AnyPublisher<[SchoolInformation], AFError>{
         print("AuthApiService - register() called")
-//        let dataas = KeychainHelper.standard.read(service: "refresh,access", account: "localLogin",type: TestData.self)!
-//        let credential = OAuthCredential(accessToken: dataas.access,
-//                                         refreshToken: dataas.refresh,
-//                                         expiration: Date(timeIntervalSinceNow: 30000))
-//        // Create the interceptor
-//        let authenticator = OAuthAuthenticator()
-//        let authInterceptor = AuthenticationInterceptor(authenticator: authenticator,
-//                                                        credential: credential)
-        print("A\((UserRouter.school_info(schoolName: schoolName)))")
-        return
-            AF.request(UserRouter.school_info(schoolName: schoolName))
-            .publishDecodable(type: SchoolInformation.self)
+
+        return AF.request(UserRouter.school_info(schoolName: schoolName))
+            .publishDecodable(type: [SchoolInformation].self)
             .value()
-            .map{ receviedValue in
-                print("유저 에이피아이 서비스에서 호출합니다\(receviedValue)")
-                return receviedValue
-                
+            .map{ receivedValue in
+                return receivedValue
             }.eraseToAnyPublisher()
     }
-    
-    func getTest() {
-            let url = "https://jsonplaceholder.typicode.com/todos/1"
-            AF.request(url,
-                       method: .get,
-                       parameters: nil,
-                       encoding: URLEncoding.default,
-                       headers: ["Content-Type":"application/json", "Accept":"application/json"])
-                .validate(statusCode: 200..<300)
-                .responseJSON { (json) in
-                    //여기서 가져온 데이터를 자유롭게 활용하세요.
-                    print(json)
-            }
-        }
+                              
 }

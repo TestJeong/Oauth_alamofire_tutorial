@@ -11,14 +11,12 @@ struct RandomUserRowView : View {
     
     var randomUser : SchoolInformation
     
-    init(_ randomUser : SchoolInformation) {
-        self.randomUser = randomUser
-    }
+   
     
     var body: some View {
         HStack{
             
-            Text("\(randomUser.school_name)")
+            Text("asdasd")
                 .fontWeight(.heavy)
                 .font(.system(size: 25))
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
